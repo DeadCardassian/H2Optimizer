@@ -1,0 +1,114 @@
+
+
+实验：2048token,1024 cache, fa = 0.000867 not fa = 0.0007591
+
+
+
+1024token,1024 cache, fa = 0.000842 fa short = 0.0001903      not fa = 0.000715(QK) + 0.000048 (QK*V)
+
+token,cache, is_fa
+
+1024,1024,0
+AVE ATTENTION TIME:
+0.0008118173
+times V ratio:
+5.78%
+kvcache ratio:
+79.85%
+softmax ratio:
+3.76%
+QK ratio:
+10.61%
+
+1024,1024,1
+AVE ATTENTION TIME:
+0.0009951857
+times V ratio:
+18.53%
+softmax ratio:
+72.66%
+QK ratio:
+8.81%
+
+
+256,1024,0
+AVE ATTENTION TIME:
+0.0007857438
+times V ratio:
+6.07%
+kvcache ratio:
+78.76%
+softmax ratio:
+4.04%
+QK ratio:
+11.13%
+
+c0 ratio:
+13.75%
+c1 ratio:
+67.60%
+c2 ratio:
+12.09%
+c3 ratio:
+6.56%
+
+H:
+25s
+Average Rouge1: 0.125000, Rouge-2: 0.000000, Rouge-l: 0.062500
+
+
+30s
+Average Rouge1: 0.125000, Rouge-2: 0.000000, Rouge-l: 0.062500
+
+
+cache = 256 # window size
+Average Rouge1: 0.326337, Rouge-2: 0.127843, Rouge-l: 0.263222
+program ends
+run time: 112.75 seconds
+
+cache = 256 H 
+Average Rouge1: 0.316674, Rouge-2: 0.123701, Rouge-l: 0.252834
+program ends
+run time: 88.61 seconds
+
+cache = 512
+Average Rouge1: 0.353327, Rouge-2: 0.134526, Rouge-l: 0.270152
+program ends
+run time: 113.19 seconds
+
+cache = 512 H 
+Average Rouge1: 0.339132, Rouge-2: 0.120676, Rouge-l: 0.259596
+program ends
+run time: 90.02 seconds
+
+
+default 20samples with skip=4:
+Average Rouge1: 0.326885, Rouge-2: 0.125705, Rouge-l: 0.260823
+program ends
+run time: 82.15 seconds
+
+default 20samples with skip=8:
+Average Rouge1: 0.329281, Rouge-2: 0.126642, Rouge-l: 0.264386
+program ends
+run time: 81.31 seconds
+
+default 20samples with skip=1:
+Average Rouge1: 0.316674, Rouge-2: 0.123701, Rouge-l: 0.252834
+program ends
+run time: 88.22 seconds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
