@@ -28,6 +28,22 @@ Meta Llama 3 is licensed under the Meta Llama 3 Community License, Copyright © 
 This project is provided "as is" without warranty of any kind, either express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose, as stated in the licenses of the respective dependencies (MIT License for H2O and Meta Llama 3 Community License for Llama 3).
 
 ---
+## Modifications
 
+### KV Cache Update
 
+I wrote a fucntion called `update_slimmingH` to replace `update_slimming` in `utils/cache.py` with more effcient KV cache updates.
 
+### Rotation Attention
+I made KV cache update at a certain number of step intervals instead of each step in `llama.py`. I also added an optional Flash Attention module, which requires Flash Attention to be installed to run.
+
+## Usage
+This is an early release, and the variables within llama.py need to be adjusted to achieve different functions.
+```
+python run_summarization.py \
+--input-path data/summarization/xsum.jsonl \
+--output-path summarization_output/xsum_h2o.jsonl \
+--model-name meta-llama/Meta-Llama-3-8B \
+--enable_h2o_generation
+```
+See more details In [H2O](https://github.com/meta-llama/llama-recipes/tree/main/recipes/experimental/long_context/H2O) original framework.
