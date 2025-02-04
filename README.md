@@ -1,6 +1,6 @@
 # H2Optimizer
 
-H2Optimizer is a modified version of [H2O](https://github.com/meta-llama/llama-recipes/tree/main/recipes/experimental/long_context/H2O), focusing on further optimizing LLM attention computations. It serves as the main codebase for this [NYU Shanghai CS Senior Project](https://drive.google.com/file/d/10qK5nrqpIJlVvzUl2J7gUW63xhfluDzf/view?usp=sharing).
+H2Optimizer is a modified version of [H2O](https://github.com/meta-llama/llama-recipes/tree/main/recipes/experimental/long_context/H2O), focusing on further optimizing LLM attention computations. It serves as the main codebase for an NYU Shanghai CS Senior Project. See this [final report](https://drive.google.com/file/d/10qK5nrqpIJlVvzUl2J7gUW63xhfluDzf/view?usp=sharing) for principle explanation and experimental results.
 
 ## Copyright Notice
 
